@@ -1,4 +1,4 @@
-package com.research.extension;
+package com.research.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
