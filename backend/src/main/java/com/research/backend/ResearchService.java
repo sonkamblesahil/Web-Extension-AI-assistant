@@ -14,17 +14,7 @@ public class ResearchService {
         this.client = Client.builder()
                 .apiKey(apiKey)
                 .build();
-        try {
-            System.out.println("--- LISTING AVAILABLE MODELS ---");
-            // Pager implements Iterable, so we can use forEach directly
-            client.models.list(null).forEach(model -> {
-                System.out.println("Model Name: " + model.name());
-            });
-            System.out.println("--------------------------------");
-        } catch (Exception e) {
-            System.err.println("Failed to list models: " + e.getMessage());
-            e.printStackTrace(); // This will help us see if it's an Auth error
-        }
+        
     }
 
     public String processContent(ResearchRequest request) {
